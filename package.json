@@ -26,6 +26,8 @@
     "vite": "^2.9.5"
   },
   "dependencies": {
+    "@okta/okta-auth-js": "6.1.0",
+    "@okta/okta-react": "6.4.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "6",

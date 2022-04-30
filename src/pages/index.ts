@@ -1,3 +1,5 @@
 import App from "./App/App";
+import Home from "./Home/Home";
+import Dashboard from "./Dashboard/Dashboard";
 
-export { App };
+export { App, Dashboard, Home };

@@ -5,7 +5,7 @@ const Header = () => {
   const { oktaAuth, authState } = useOktaAuth();
 
   const login = async () => oktaAuth.signInWithRedirect();
-  const logout = async () => oktaAuth.signOut("/");
+  const logout = async () => oktaAuth.signOut();
 
   if (!authState) {
     return <div>Loading...</div>;

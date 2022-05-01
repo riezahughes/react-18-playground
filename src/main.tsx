@@ -15,7 +15,7 @@ const oktaAuth = new OktaAuth({
 
 function restoreOriginalUri(oktaAuth: OktaAuth, originalUri: string) {
   window.location.replace(
-    toRelativeUrl(originalUri || "/", window.location.origin)
+    toRelativeUrl(originalUri || "/dashboard", window.location.origin)
   );
 }
 

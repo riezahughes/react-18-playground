@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { App } from "./pages";
 import "./index.css";
 import { Security } from "@okta/okta-react";
 import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
 
 const oktaAuth = new OktaAuth({
-  issuer: `https://dev-97039192.okta.com/oauth2/default`,
-  clientId: "0oa4vgeuiybHDeA7T5d7",
-  redirectUri: `${window.location.origin}/callback`,
-  pkce: false,
+  issuer: import.meta.env.VITE_ISSUER,
+  clientId: import.meta.env.VITE_CLIENTID,
+  redirectUri: import.meta.env.VITE_REDIRECTURI,
+  pkce: import.meta.env.VITE_PKCE as boolean | undefined,
 });
 
 function restoreOriginalUri(oktaAuth: OktaAuth, originalUri: string) {

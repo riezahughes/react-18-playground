@@ -6,11 +6,16 @@ import "./index.css";
 import { Security } from "@okta/okta-react";
 import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
 
+console.log(import.meta.env.VITE_PKCE);
+console.log(typeof import.meta.env.VITE_PKCE);
+
+console.log(import.meta.env.VITE_REDIRECTURI);
+
 const oktaAuth = new OktaAuth({
   issuer: import.meta.env.VITE_ISSUER,
   clientId: import.meta.env.VITE_CLIENTID,
   redirectUri: import.meta.env.VITE_REDIRECTURI,
-  pkce: import.meta.env.VITE_PKCE as boolean | undefined,
+  pkce: false,
 });
 
 function restoreOriginalUri(oktaAuth: OktaAuth, originalUri: string) {

@@ -10,6 +10,7 @@ const oktaAuth = new OktaAuth({
   issuer: `https://dev-97039192.okta.com/oauth2/default`,
   clientId: "0oa4vgeuiybHDeA7T5d7",
   redirectUri: `${window.location.origin}/callback`,
+  pkce: false,
 });
 
 function restoreOriginalUri(oktaAuth: OktaAuth, originalUri: string) {
@@ -20,10 +21,10 @@ function restoreOriginalUri(oktaAuth: OktaAuth, originalUri: string) {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
         <App />
-      </BrowserRouter>
-    </Security>
+      </Security>
+    </BrowserRouter>
   </React.StrictMode>
 );

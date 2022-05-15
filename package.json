@@ -31,9 +31,12 @@
   "dependencies": {
     "@okta/okta-auth-js": "6.1.0",
     "@okta/okta-react": "6.4.2",
+    "@reduxjs/toolkit": "^1.8.1",
+    "@riezahughes/emotion-storybook-library": "^0.0.4",
     "dotenv": "^16.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-redux": "^8.0.1",
     "react-router-dom": "6",
     "typescript": "^4.6.3"
   }

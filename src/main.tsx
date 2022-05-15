@@ -5,6 +5,7 @@ import { App } from "./pages";
 import "./index.css";
 import { Security } from "@okta/okta-react";
 import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
+import { GlobalThemeProvider } from "./store";
 
 console.log(import.meta.env.VITE_PKCE);
 console.log(typeof import.meta.env.VITE_PKCE);
@@ -27,9 +28,11 @@ function restoreOriginalUri(oktaAuth: OktaAuth, originalUri: string) {
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
-        <App />
-      </Security>
+      <GlobalThemeProvider>
+        <Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
+          <App />
+        </Security>
+      </GlobalThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

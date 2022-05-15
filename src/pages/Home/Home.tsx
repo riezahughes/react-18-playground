@@ -1,8 +1,12 @@
 import React from "react";
-import { Header } from "../../components";
+import { DarkToggle, Header } from "@riezahughes/emotion-storybook-library/lib";
 
 const Home = () => {
-  return <Header />;
+  return (
+    <Header illuminate={false}>
+      <DarkToggle isDark={false} />
+    </Header>
+  );
 };
 
 export default Home;

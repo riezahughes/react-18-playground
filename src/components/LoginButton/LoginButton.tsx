@@ -1,7 +1,7 @@
 import React from "react";
 import { useOktaAuth } from "@okta/okta-react";
 
-const Header = () => {
+const LoginButton = () => {
   const { oktaAuth, authState } = useOktaAuth();
 
   const login = async () => oktaAuth.signInWithRedirect();
@@ -28,4 +28,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default LoginButton;

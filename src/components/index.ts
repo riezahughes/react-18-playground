@@ -1,5 +1,5 @@
 import Loading from "./Loading/Loading";
 import { RequiredAuth } from "./SecureRoute/SecureRoute";
-import Header from "./Header/Header";
+import LoginButton from "./LoginButton/LoginButton";
 
-export { Loading, RequiredAuth, Header };
+export { Loading, RequiredAuth, LoginButton };
